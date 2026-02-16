@@ -27,5 +27,12 @@ namespace TaskTrackerCLI
 
             return JsonSerializer.Deserialize<List<TaskItem>>(json) ?? new List<TaskItem>();
         }
+
+        private void SaveTasks(Task<TaskItem> tasks)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(tasks, options);
+            File.WriteAllText(FilePath, json);
+        }
     }
 }
