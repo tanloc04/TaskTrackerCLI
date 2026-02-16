@@ -1,0 +1,40 @@
+## --- Build & Runtime ---
+# Thư mục chứa kết quả build (file .exe, .dll)
+bin/
+obj/
+
+# File user-specific (cấu hình riêng của máy bạn)
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- IDE Specific ---
+# Visual Studio
+.vs/
+*.suo
+*.userprefs
+
+# VS Code
+.vscode/
+
+# JetBrains Rider (Quan trọng với bạn nè)
+.idea/
+*.sln.DotSettings.user
+
+## --- OS Specific ---
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac/Linux (đề phòng bạn switch qua Linux)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## --- App Specific ---
+# Quan trọng: Chặn file data để không đẩy dữ liệu test lên Git
+*.json
+!appsettings.json 
+# Dòng trên nghĩa là: Chặn tất cả file .json (ví dụ tasks.json chứa dữ liệu), 
+# NHƯNG GIỮ LẠI appsettings.json (nếu sau này bạn dùng để lưu cấu hình)
